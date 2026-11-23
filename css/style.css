@@ -1,0 +1,643 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff5fa;
+    color: #3d2632;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 3px 15px rgba(214, 51, 132, 0.12);
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+.logo span,
+.footer-logo span {
+    color: #ff69a8;
+}
+
+.nav-menu {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #5b3548;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #d63384;
+    transform: translateY(-2px);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: #d63384;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 90vh;
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hello {
+    color: #d63384;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin: 10px 0;
+}
+
+.hero h1 span {
+    color: #d63384;
+}
+
+.hero h2 {
+    color: #7d4260;
+    margin-bottom: 20px;
+}
+
+.hero-text > p {
+    line-height: 1.8;
+    color: #765466;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTON */
+
+.btn,
+.portfolio-card button {
+    display: inline-block;
+
+    border: none;
+    background: #d63384;
+    color: white;
+
+    padding: 13px 22px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover,
+.portfolio-card button:hover {
+    background: #b9236b;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(214, 51, 132, 0.3);
+}
+
+.btn:active,
+.portfolio-card button:active {
+    transform: scale(0.94);
+}
+
+
+/* HERO CARD */
+
+.hero-card {
+    width: 300px;
+
+    background: linear-gradient(
+        135deg,
+        #ffb6d5,
+        #f783b8
+    );
+
+    padding: 40px;
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 40px rgba(214, 51, 132, 0.25);
+
+    transition: 0.4s;
+}
+
+.hero-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+
+    margin: auto;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+    color: #d63384;
+
+    font-size: 65px;
+    font-weight: bold;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hero-card h3 {
+    font-size: 28px;
+    color: white;
+}
+
+.hero-card p {
+    color: white;
+    margin-top: 8px;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.pink-section {
+    max-width: none;
+    padding-left: calc((100% - 1100px) / 2);
+    padding-right: calc((100% - 1100px) / 2);
+
+    background: #ffe0ed;
+}
+
+.section-label {
+    color: #d63384;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: 38px;
+    margin: 10px 0 40px;
+    color: #442535;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.about-text {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(214,51,132,0.08);
+}
+
+.about-text h3 {
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #705364;
+    margin-bottom: 15px;
+}
+
+.skill-box {
+    background: #d63384;
+    color: white;
+
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(214,51,132,0.2);
+}
+
+.skill-box h3 {
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background: white;
+    color: #d63384;
+
+    padding: 9px 13px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    transform: scale(1.08);
+}
+
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.portfolio-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(214,51,132,0.1);
+
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(214,51,132,0.2);
+}
+
+.project-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.portfolio-card h3 {
+    color: #d63384;
+    margin-bottom: 12px;
+}
+
+.portfolio-card p {
+    line-height: 1.7;
+    color: #765466;
+    margin-bottom: 20px;
+}
+
+
+/* ================= PENDIDIKAN ================= */
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.education-card {
+    background: white;
+    padding: 30px;
+
+    border-radius: 20px;
+
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+
+    box-shadow: 0 8px 25px rgba(214,51,132,0.1);
+
+    transition: 0.4s;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(214,51,132,0.2);
+}
+
+.education-card.target {
+    border: 3px solid #f783b8;
+}
+
+.education-logo {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff0f6;
+    border-radius: 20px;
+
+    flex-shrink: 0;
+}
+
+.education-logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.status {
+    display: inline-block;
+
+    background: #d63384;
+    color: white;
+
+    padding: 6px 10px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.target-status {
+    background: #f783b8;
+}
+
+.education-content h3 {
+    color: #d63384;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.education-content h4 {
+    color: #704358;
+    margin-bottom: 10px;
+}
+
+.education-content p {
+    color: #765466;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+
+/* ================= PENGALAMAN ================= */
+
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.experience-card {
+    background: white;
+    padding: 30px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+}
+
+.experience-card span {
+    color: #f783b8;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.experience-card h3 {
+    color: #d63384;
+    margin: 15px 0;
+}
+
+.experience-card p {
+    color: #765466;
+    line-height: 1.7;
+}
+
+
+/* ================= KONTAK ================= */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-text {
+    color: #765466;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    width: 280px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+    text-align: left;
+
+    box-shadow: 0 8px 20px rgba(214,51,132,0.1);
+
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    background: #fff0f6;
+}
+
+.contact-card > span {
+    font-size: 35px;
+}
+
+.contact-card h3 {
+    color: #d63384;
+}
+
+.contact-card p {
+    color: #765466;
+    margin-top: 5px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #c21868;
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.footer-logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+footer p {
+    margin-top: 8px;
+}
+
+.footer-line {
+    width: 80%;
+    height: 1px;
+
+    background: rgba(255,255,255,0.3);
+
+    margin: 25px auto;
+}
+
+
+/* ================= ANIMASI ================= */
+
+.section,
+.hero {
+    animation: muncul 0.8s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        text-align: center;
+
+        box-shadow: 0 5px 15px rgba(214,51,132,0.15);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .about,
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-container,
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pink-section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .education-card {
+        flex-direction: column;
+    }
+
+} */
+
